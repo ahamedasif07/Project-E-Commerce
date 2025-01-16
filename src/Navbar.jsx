@@ -42,20 +42,25 @@ const Navbar = () => {
     {/* mini device starts */}
    
     
-  <div
-    className="absolute bg-gray-500 right-[20px] py-2 top-[100px] transition-transform duration-500 ease-in-out transform translate-y-[-50px] opacity-0"
-    style={{ transform: isMenuOpen ? "translateY(0)" : "translateY(-50px)", opacity: isMenuOpen ? 1 : 0 }}
-  >
-    <div className="md:hidden block">
-      <ul className="px-6">
-        <li className="text-[18px]">Home</li>
-        <li className="text-[18px]">Home</li>
-        <li className="text-[18px]">Home</li>
-        <li className="text-[18px]">Home</li>
-        <li className="text-[18px]">Home</li>
-      </ul>
-    </div>
-  </div>
+    <div className={`${isMenuOpen ? 'opacity-100' : 'opacity-0'} md:opacity-0 opacity-100`}>
+            <ul 
+              className={`absolute left-0 w-full bg-[#E9EFFE] text-center py-2 text-black z-10 
+                          transform transition-all duration-500 ease-in-out opacity-0 
+                          ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-[-20px]'}`}
+            >
+              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
+              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
+              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
+              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
+              <li className="font-semibold flex justify-center">
+                
+
+                
+              </li>
+            </ul>
+          </div>
+        
+        
 
 
    
