@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import BookCard from '../BookCard/BookCard';
+import { DataContext } from '../../MainLayOut';
 
 const ChildrenBooks = () => {
+  const {data} =useContext(DataContext)
     const childrenBooksData = [
         {
           id: 1,
@@ -153,7 +155,7 @@ const ChildrenBooks = () => {
       </div>
       <div className="mt-6 p-4">
         <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
-          {childBook.slice(0, viewList).map((book) => (
+          {data.slice(0, viewList).map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
         </div>
@@ -161,9 +163,9 @@ const ChildrenBooks = () => {
       
         <button
           onClick={() => setViewList(viewList + 5)}
-          className={`bg-green-500 ${viewList >= childBook.length ? 'hidden':'block'}  text-white`}
+          className={`bg-red-500 hover:bg-red-600 rounded-md  mx-auto text-[14px] px-2 py-2  ${viewList >= childBook.length ? 'hidden':'block'}  text-white`}
         >
-          View more
+          View <span className="text-white  text-[14px]">More</span>
         </button>
       
     </div>

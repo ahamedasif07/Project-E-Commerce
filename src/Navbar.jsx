@@ -81,7 +81,7 @@ const Navbar = () => {
     <hr />
     {/* mini device starts */}
    
-    <div className={`${isMenuOpen ? 'opacity-100' : 'opacity-0'} md:opacity-0 opacity-100`}>
+    <div className={`${isMenuOpen ? 'block' : 'hidden'} md:opacity-0 opacity-100`}>
     <ul
   className={`absolute left-0 w-full bg-[#FFE330] text-center py-2 text-black z-10 
               transform transition-all duration-500 ease-in-out opacity-0 

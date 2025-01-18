@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 
 
 const MainCategorys = () => {
+    
     useEffect(() => {
         AOS.init({
           duration: 1000, // Animation duration in milliseconds
