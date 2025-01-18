@@ -8,15 +8,19 @@ import TravelsBooks from '../../assets/TravelBook.jpg';
 const MainCategorys = () => {
   return (
     <div>
-        <div className='max-w-screen-xl mx-auto  mt-5 '>
-            <div className='flex justify-around '>
+        <div className='max-w-screen-xl mx-auto px-4  mt-5 '>
+            <div className='flex lg:flex-row flex-col gap-4 justify-around '>
                 <img className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={comixBook} alt='img'></img>
              <div className='flex flex-col justify-between'>
-             <div className='flex gap-5'>
+
+
+             <div className='flex lg:flex-row flex-col gap-5'>
                     <img  className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={ArtBook} alt='img'></img>
                     <img  className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={bussnessBook} alt='img'></img>
              </div>
-             <div className='flex gap-5 mt-5'>
+
+
+             <div className='flex gap-5 lg:flex-row flex-col mt-5'>
                     <img  className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300'  src={ChildrenBook} alt='img'></img>
                     <img  className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={TravelsBooks} alt='img'></img>
              </div>
