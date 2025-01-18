@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaShoppingCart } from "react-icons/fa";
 
 const BookCard = ({book}) => {
     const {bookCategory,image,bookName,price,discountPrice,discountPercentage}=book;
@@ -17,6 +18,11 @@ const BookCard = ({book}) => {
     <h3 className="bg-red-500 hover:bg-red-600 transition-all duration-300 ease-in-out py-[6px] px-2 text-slate-100 font-semibold rounded-md">
       {discountPercentage}%
     </h3>
+  </div>
+  <div className='flex items-center gap-2 justify-center'>
+   <p className='p-1 text-gray-700 hover:text-[#FFE330] transition-all duration-300 ease-in-out'> <FaShoppingCart/></p>
+    
+
   </div>
 </div>
 

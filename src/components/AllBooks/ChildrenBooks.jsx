@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import BookCard from '../BookCard/BookCard';
 
 const ChildrenBooks = () => {
@@ -92,25 +92,82 @@ const ChildrenBooks = () => {
           price: 18.99,
           discountPrice: 14.49,
           discountPercentage: 24
-        }
+        },
+        {
+            id: 11,
+            bookCategory: "Children's Books",
+            image: "https://i.ibb.co.com/FW5D5QM/images-14.jpg",
+            bookName: "Magic Adventures",
+            price: 14.99,
+            discountPrice: 10.99,
+            discountPercentage: 27
+          },
+          {
+            id: 12,
+            bookCategory: "Children's Books",
+            image: "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
+            bookName: "Fairy Tales",
+            price: 12.99,
+            discountPrice: 9.49,
+            discountPercentage: 27
+          },
+          {
+            id: 13,
+            bookCategory: "Children's Books",
+            image: "https://i.ibb.co.com/0m8sb4D/images-10.jpgshttps://i.ibb.co.com/f1XbfgR/images-11.jpg",
+            bookName: "Learn to Count",
+            price: 8.75,
+            discountPrice: 6.49,
+            discountPercentage: 26
+          },
+          {
+            id: 14,
+            bookCategory: "Children's Books",
+            image: "https://i.ibb.co.com/Hp1pDkr/images-15.jpg",
+            bookName: "Bedtime Stories",
+            price: 10.50,
+            discountPrice: 7.75,
+            discountPercentage: 26
+          },
+          {
+            id: 15,
+            bookCategory: "Children's Books",
+            image: "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
+            bookName: "Discover Nature",
+            price: 13.99,
+            discountPrice: 10.29,
+            discountPercentage: 27
+          }
       ];
-      
-      
+
+  const [viewList, setViewList] = useState(10);
+  const [childBook] = useState(childrenBooksData); // Initialize with data
+
   return (
-    <div className='py-[100px] max-w-[1100px] mx-auto'>
-       <div className='flex flex-col group justify-center mx-auto items-center'>
-       <h2 className='text-gray-800 font-semibold text-lg '>CHILDREN’S <span className='text-[#ED1B24]'>BOOKS</span> </h2>
-       <p className='h-[4px] text-center bg-yellow-500 w-[40px] group-hover:w-[160px] ease-in-out duration-300'></p>
-       </div>
-      <div className=' mt-6 p-4'>
-      <div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center'>
-        {childrenBooksData.map(book => <BookCard key={book.id} book={book}></BookCard> )}
-       </div>
-
+    <div className="py-[100px] max-w-[1100px] mx-auto">
+      <div className="flex flex-col group justify-center mx-auto items-center">
+        <h2 className="text-gray-800 font-semibold text-lg">
+          CHILDREN’S <span className="text-[#ED1B24]">BOOKS</span>
+        </h2>
+        <p className="h-[4px] text-center bg-yellow-500 w-[40px] group-hover:w-[160px] ease-in-out duration-300"></p>
       </div>
-
+      <div className="mt-6 p-4">
+        <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
+          {childBook.slice(0, viewList).map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </div>
+      </div>
+      
+        <button
+          onClick={() => setViewList(viewList + 5)}
+          className={`bg-green-500 ${viewList >= childBook.length ? 'hidden':'block'}  text-white`}
+        >
+          View more
+        </button>
+      
     </div>
-  )
-}
+  );
+};
 
-export default ChildrenBooks
+export default ChildrenBooks;
