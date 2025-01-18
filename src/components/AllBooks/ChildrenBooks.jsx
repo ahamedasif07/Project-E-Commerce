@@ -1,4 +1,5 @@
 import React from 'react'
+import BookCard from '../BookCard/BookCard';
 
 const ChildrenBooks = () => {
     const childrenBooksData = [
@@ -96,12 +97,18 @@ const ChildrenBooks = () => {
       
       
   return (
-    <div className='py-[100px]'>
-       <div className='flex flex-col group justify-center items-center'>
+    <div className='py-[100px] max-w-[1100px] mx-auto'>
+       <div className='flex flex-col group justify-center mx-auto items-center'>
        <h2 className='text-gray-800 font-semibold text-lg '>CHILDREN’S <span className='text-[#ED1B24]'>BOOKS</span> </h2>
        <p className='h-[4px] text-center bg-yellow-500 w-[40px] group-hover:w-[160px] ease-in-out duration-300'></p>
        </div>
-       
+      <div className=' mt-6 p-4'>
+      <div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center'>
+        {childrenBooksData.map(book => <BookCard key={book.id} book={book}></BookCard> )}
+       </div>
+
+      </div>
+
     </div>
   )
 }
