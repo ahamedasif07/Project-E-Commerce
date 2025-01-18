@@ -3,26 +3,65 @@ import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
+import logo from '../src/assets/logo.png';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen,setIsMenuOpen]=useState(false)
+  const [activeIndex, setActiveIndex] = useState(null);
   return (
-   <div>
+   <div className='bg-[#FFE330]'>
     {/* mini device starts */}
-     <div className='max-w-[1100px] mx-auto py-[20px] px-4 '>
+     <div className='max-w-[1100px]  mx-auto py-[20px] px-4 '>
     <div className='flex justify-between '> 
        <div>
-      <h2 className='font-bold text-lg'>ASIF</h2>
+      {/* <h2 className='font-bold text-lg'>ASIF</h2> */}
+      <img className='h-[30px] w-[40px]' src={logo}></img>
       </div>
       {/* main nabbar menu start */}
       <div className='md:block hidden'>
-        <ul className='flex items-center gap-5'>
-          <li className='text-[18px]'> Home</li>
-          <li className='text-[18px]'> Home</li>
-          <li className='text-[18px]'> Home</li>
-          <li className='text-[18px]'> Home</li>
-          <li className='text-[18px]'> Home</li>
-        </ul>
+      <ul className="flex items-center gap-5">
+      <li>
+        <NavLink
+          to="/home"
+          className={({ isActive }) =>
+            `text-[18px] text-gray-800 font-[500] ${isActive ? 'border-b-2 border-red-500' : ''}`
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `text-[18px] text-gray-800 font-[500] ${isActive ? 'border-b-2 border-red-500' : ''}`
+          }
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/services"
+          className={({ isActive }) =>
+            `text-[18px] text-gray-800 font-[500] ${isActive ? 'border-b-2 border-red-500' : ''}`
+          }
+        >
+          Services
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `text-[18px] text-gray-800 font-[500] ${isActive ? 'border-b-2 border-red-500' : ''}`
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
+    </ul>
       </div>
       {/* main nabbar menu end */}
 
@@ -41,28 +80,63 @@ const Navbar = () => {
     <hr />
     {/* mini device starts */}
    
-    
     <div className={`${isMenuOpen ? 'opacity-100' : 'opacity-0'} md:opacity-0 opacity-100`}>
-            <ul 
-              className={`absolute left-0 w-full bg-[#E9EFFE] text-center py-2 text-black z-10 
-                          transform transition-all duration-500 ease-in-out opacity-0 
-                          ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-[-20px]'}`}
-            >
-              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
-              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
-              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
-              <li className="px-4 py-2 text-[17px] font-[400] hover:bg-gray-100 cursor-pointer">Home</li>
-              <li className="font-semibold flex justify-center">
-                
+    <ul
+  className={`absolute left-0 w-full bg-[#FFE330] text-center py-2 text-black z-10 
+              transform transition-all duration-500 ease-in-out opacity-0 
+              ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-[-20px]'}`}
+>
+  <li className="my-2 px-4">
+    <NavLink
+      to="/home"
+      className={({ isActive }) =>
+        `block text-[17px] font-[500] text-gray-800 hover:bg-gray-100 cursor-pointer ${
+          isActive ? 'bg-gray-200 border-b-2 border-red-500' : ''
+        }`
+      }
+    >
+      Home
+    </NavLink>
+  </li>
+  <li className="my-2 px-4">
+    <NavLink
+      to="/about"
+      className={({ isActive }) =>
+        `block text-[17px] font-[500] text-gray-800 hover:bg-gray-100 cursor-pointer ${
+          isActive ? 'bg-gray-200 border-b-2 border-red-500' : ''
+        }`
+      }
+    >
+      About
+    </NavLink>
+  </li>
+  <li className="my-2 px-4">
+    <NavLink
+      to="/services"
+      className={({ isActive }) =>
+        `block text-[17px] font-[500] text-gray-800 hover:bg-gray-100 cursor-pointer ${
+          isActive ? 'bg-gray-200 border-b-2 border-red-500' : ''
+        }`
+      }
+    >
+      Services
+    </NavLink>
+  </li>
+  <li className="my-2 px-4">
+    <NavLink
+      to="/contact"
+      className={({ isActive }) =>
+        `block text-[17px] font-[500] text-gray-800 hover:bg-gray-100 cursor-pointer ${
+          isActive ? 'bg-gray-200 border-b-2 border-red-500' : ''
+        }`
+      }
+    >
+      Contact
+    </NavLink>
+  </li>
+</ul>
 
-                
-              </li>
-            </ul>
-          </div>
-        
-        
-
-
+    </div>
    
        {/* mini navbar end  */}
     
