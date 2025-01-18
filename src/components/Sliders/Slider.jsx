@@ -20,7 +20,7 @@ const Slider = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden bg-gray-200">
+    <div className="relative w-full h-[400px] md:h-[570px] overflow-hidden bg-gray-200">
       {/* Slides */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
