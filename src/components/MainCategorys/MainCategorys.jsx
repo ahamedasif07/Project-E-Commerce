@@ -11,7 +11,7 @@ const MainCategorys = () => {
         <div className='max-w-screen-xl mx-auto  mt-5 '>
             <div className='flex justify-around '>
                 <img className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={comixBook} alt='img'></img>
-             <div className=''>
+             <div className='flex flex-col justify-between'>
              <div className='flex gap-5'>
                     <img  className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={ArtBook} alt='img'></img>
                     <img  className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={bussnessBook} alt='img'></img>

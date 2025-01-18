@@ -20,7 +20,8 @@ const Slider = () => {
   }, [slides.length]);
 
   return (
-    <div className="relative w-full h-[400px] md:h-[570px] overflow-hidden bg-gray-200">
+   <div className="max-w-screen-xl mx-auto py-[50px]">
+     <div className="relative w-full  h-[400px] md:h-[570px] overflow-hidden bg-gray-200">
       {/* Slides */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
@@ -29,7 +30,7 @@ const Slider = () => {
         {slides.map((slide) => (
           <div key={slide.id} className="w-full flex-shrink-0">
             <img
-              src={slide.image}
+              src={slide.image} 
               alt={slide.alt}
               className="w-full h-full object-cover"
             />
@@ -38,7 +39,7 @@ const Slider = () => {
       </div>
 
       {/* Navigation Dots */}
-      {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -48,8 +49,9 @@ const Slider = () => {
             onClick={() => setCurrentIndex(index)}
           />
         ))}
-      </div> */}
+      </div>
     </div>
+   </div>
   );
 };
 
