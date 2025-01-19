@@ -18,7 +18,9 @@ const BookCard = ({book}) => {
   <h2 className="text-[16px] text-center py-2 transition-all ease-in-out duration-300 text-gray-900 hover:text-[#FFE330] font-semibold">
     {bookName}
   </h2>
-  <img className="w-full h-full object-fill" src={image} alt="" />
+  <div className="max-w-[180px]  mx-auto">
+  <img className="w-full h-full object-cover" src={image} alt="" />
+</div>
 
 
 
@@ -36,12 +38,11 @@ const BookCard = ({book}) => {
       <FaShoppingCart />
     </p>
     <p className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
-     
+  
       <IoEye />
     </p>
     <Link to={`/details/${id}`} className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
     < FaDiceD6/>
-
     </Link>
   </div>
 </div>

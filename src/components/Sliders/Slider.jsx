@@ -20,11 +20,11 @@ const Slider = () => {
   }, [slides.length]);
 
   return (
-   <div className="max-w-screen-xl w-full mx-auto py-[50px]">
-     <div className="relative w-full  max-h-[500px] overflow-hidden bg-gray-200">
+   <div className="max-w-screen-2xl md:px-[50px] w-full mx-auto py-[50px]">
+     <div className="relative w-full  max-h-[700px] overflow-hidden bg-gray-200">
       {/* Slides */}
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex transition-transform  duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide) => (
@@ -32,7 +32,7 @@ const Slider = () => {
             <img
               src={slide.image} 
               alt={slide.alt}
-              className="w-full h-full object-cover"
+              className="w-full  rounded-md h-full object-cover"
             />
           </div>
         ))}

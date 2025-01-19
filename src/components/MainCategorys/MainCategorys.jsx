@@ -17,9 +17,9 @@ const MainCategorys = () => {
         });
       }, []);
   return (
-    <div>
-        <div className='max-w-screen-xl mx-auto px-4  mt-5 overflow-hidden'>
-            <div className='flex lg:flex-row flex-col gap-4 justify-around '>
+    <div className='max-w-screen-2xl md:px-[50px] px-4 mx-auto'>
+        <div className='mx-auto   mt-5 overflow-hidden'>
+            <div className='flex lg:flex-row flex-col gap-4 justify-between '>
                 <img data-aos="fade-up" className='hover:opacity-80 opacity-100 transition-all ease-in-out duration-300' src={comixBook} alt='img'></img>
              <div className='flex flex-col justify-between'>
 

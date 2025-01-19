@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
    <div className='bg-[#FFE330]'>
     {/* mini device starts */}
-     <div className='max-w-[1100px]  mx-auto py-[20px] px-4 '>
+     <div className='max-w-screen-2xl md:px-[50px]  mx-auto py-[20px] px-4 '>
     <div className='flex justify-between '> 
        <div>
       {/* <h2 className='font-bold text-lg'>ASIF</h2> */}
