@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaShoppingCart } from "react-icons/fa";
+import { FaDiceD6 } from "react-icons/fa6";
+import { IoEye } from "react-icons/io5";
 
 const BookCard = ({book}) => {
     const {bookCategory,image,bookName,price,discountPrice,discountPercentage}=book;
@@ -23,15 +25,17 @@ const BookCard = ({book}) => {
     </h3>
   </div>
   <div className="absolute bottom-12 w-full">
-  <div className="flex items-center py-2 transform translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 bg-gray-100 shadow-md gap-2 justify-center transition-all duration-300 ease-in-out">
-    <p className="p-1 text-gray-700 hover:text-[#FFE330] transition-all duration-300 ease-in-out">
+  <div className="flex items-center justify-around py-2 transform translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 bg-gray-100 shadow-md gap-2 justify-center transition-all duration-300 ease-in-out">
+    <p className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
       <FaShoppingCart />
     </p>
-    <p className="p-1 text-gray-700 hover:text-[#FFE330] transition-all duration-300 ease-in-out">
-      <FaShoppingCart />
+    <p className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
+     
+      <IoEye />
     </p>
-    <p className="p-1 text-gray-700 hover:text-[#FFE330] transition-all duration-300 ease-in-out">
-      <FaShoppingCart />
+    <p className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
+    < FaDiceD6/>
+
     </p>
   </div>
 </div>
