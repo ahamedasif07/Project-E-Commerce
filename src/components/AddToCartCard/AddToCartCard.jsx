@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useContext, useState } from 'react';
 import { RiDeleteBinLine } from 'react-icons/ri';
+import { AddToCartContext } from '../../MainLayOut';
 
 const AddToCartCard = ({ book, addToCart }) => {
+    const {handleRemoveFromCart}=useContext(AddToCartContext);
     const { name, image, bookCategory, bookName, price, discountPrice, discountPercentage } = book;
 
     // State to manage quantity
@@ -102,7 +105,7 @@ const AddToCartCard = ({ book, addToCart }) => {
                         </p>
                     </div>
                     <div className="flex items-center gap-4 mt-4 lg:mt-0">
-                        <button
+                        <button onClick={()=>handleRemoveFromCart(book)}
                             className="text-[18px] text-gray-700 hover:text-red-500 transition-all duration-300"
                         >
                             <RiDeleteBinLine />
