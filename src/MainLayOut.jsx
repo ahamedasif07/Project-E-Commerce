@@ -1,6 +1,11 @@
 import { Outlet } from "react-router";
 import NavBar from "./Navbar";
 import { createContext, useEffect, useState } from "react";
+import "react-toastify/dist/ReactToastify.css"; 
+import { Bounce, toast, ToastContainer } from "react-toastify";
+
+
+
 
 export const DataContext = createContext();
 export const AddToCartContext = createContext(); // Fixed naming
@@ -35,21 +40,48 @@ const MainLayOut = () => {
   const handleAddToCart = (book) => {
     console.log('get the add to cart item on there', book);
 
-    // Find the product by its ID
-    const filteredProduct = data.find(item => item.id === book.id);
+    // Check if the product is already in the cart
+    const isProductInCart = cart.some(item => item.id === book.id);
 
-    if (filteredProduct) {
-      // Add the filtered product to the cart
-      setCart(prevCart => [...prevCart, filteredProduct]);
+    if (isProductInCart) {
+      // If the product is already in the cart, show an alert
+      console.log('Product is already in the cart');
+      toast.warning("Product already exists in the cart!");
     } else {
-      console.log('Product not found');
+      // If the product is not in the cart, find the product and add it to the cart
+      const filteredProduct = data.find(item => item.id === book.id);
+      toast.success("Product added to the cart successfully!");
+    
+      
+
+      if (filteredProduct) {
+        // Add the filtered product to the cart
+        setCart(prevCart => [...prevCart, filteredProduct]);
+      } else {
+        console.log('Product not found');
+      }
     }
-  };
+};
+
 
   console.log('filteredProduct from cart', cart);
 
   return (
     <div>
+      
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
       <DataContext.Provider value={{ data, loading, error }}>
         <AddToCartContext.Provider value={{ handleAddToCart, cart, setCart }}>
           <NavBar />
