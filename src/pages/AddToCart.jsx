@@ -1,11 +1,19 @@
 import React, { useContext } from 'react'
-import { DataContext } from '../MainLayOut'
+import { AddToCartContext } from '../MainLayOut'
+import AddToCartCard from '../components/AddToCartCard/AddToCartCard'
+
 
 const AddToCart = () => {
-    const {data}=useContext(DataContext)
-    console.log(data)
+ const {cart}=useContext(AddToCartContext)
+
   return (
-    <div>AddToCart</div>
+    <div>
+        <div className='mt-4'>
+         {
+         cart.map(book => <AddToCartCard key={book.id} book={book}></AddToCartCard>)
+         }
+        </div>
+    </div>
   )
 }
 

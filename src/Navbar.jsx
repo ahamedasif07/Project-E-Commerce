@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import logo from '../src/assets/logo.png';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen,setIsMenuOpen]=useState(false)
@@ -71,7 +71,7 @@ const Navbar = () => {
        
       <div className='flex items-center gap-4'>
         <p className='text-[18px]'><FaSearch /></p>
-        <p className='text-[18px] md:block hidden'><FaShoppingCart /></p>
+        <Link to='/AddToCart' className='text-[18px] md:block hidden'><FaShoppingCart /></Link>
         <p className='text-[18px] md:block hidden'><FaUser /></p>
         <p onClick={()=>setIsMenuOpen(!isMenuOpen)} className='text-[18px] md:hidden block'><RiMenu3Line /></p>
       </div>
