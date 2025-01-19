@@ -10,7 +10,7 @@ import { AddToCartContext } from '../../MainLayOut';
 const BookCard = ({book}) => {
   // eslint-disable-next-line no-unused-vars
     const {handleAddToCart}=useContext(AddToCartContext)
-    const {bookCategory,image,bookName,price,discountPrice,discountPercentage}=book;
+    const {bookCategory,id,image,bookName,price,discountPrice,discountPercentage}=book;
   return (
     <div>
         <div className="border-2 group relative border-gray-300 transition-transform transform hover:scale-105 hover:shadow-lg duration-300 ease-in-out">
@@ -39,10 +39,10 @@ const BookCard = ({book}) => {
      
       <IoEye />
     </p>
-    <p className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
+    <Link to={`/details/${id}`} className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
     < FaDiceD6/>
 
-    </p>
+    </Link>
   </div>
 </div>
 

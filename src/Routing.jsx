@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayOut from "./MainLayOut";
 import Home from "./pages/Home";
 import AddToCart from "./pages/AddToCart";
+import Details from "./pages/Details";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
       {
         path: "/addToCart", // Represents the default child route
         element: <AddToCart/>,
+      },
+      {
+        path: "/details/:id", // Represents the default child route
+        element:<Details/>,
       },
     ],
   },
