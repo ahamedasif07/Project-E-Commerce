@@ -1,13 +1,15 @@
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FaSearch } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import logo from '../src/assets/logo.png';
 import { Link, NavLink } from 'react-router-dom';
+import { AddToCartContext } from './MainLayOut';
 
 const Navbar = () => {
+  const {cart} = useContext(AddToCartContext)
   const [isMenuOpen,setIsMenuOpen]=useState(false)
   const [activeIndex, setActiveIndex] = useState(null);
   return (
@@ -71,7 +73,9 @@ const Navbar = () => {
        
       <div className='flex items-center gap-4'>
         <p className='text-[18px]'><FaSearch /></p>
-        <Link to='/AddToCart' className='text-[18px] md:block hidden'><FaShoppingCart /></Link>
+        <Link to='/AddToCart' className='text-[18px] relative md:block hidden'><h2 className='flex items-center'><FaShoppingCart />
+        <p className='bg-red-500 text-[10px] absolute bottom-[12px] left-[14px] px-[4px] rounded-md text-center text-white '>{cart.length}</p></h2>
+        </Link>
         <p className='text-[18px] md:block hidden'><FaUser /></p>
         <p onClick={()=>setIsMenuOpen(!isMenuOpen)} className='text-[18px] md:hidden block'><RiMenu3Line /></p>
       </div>
@@ -79,6 +83,7 @@ const Navbar = () => {
     </div>
     {/* mini device ends */}
     <hr />
+
     {/* mini device starts */}
    
     <div className={`${isMenuOpen ? 'block' : 'hidden'} md:opacity-0 opacity-100`}>
