@@ -10,7 +10,10 @@ const BookCard = ({book}) => {
   <h2 className="text-[16px] text-center py-2 transition-all ease-in-out duration-300 text-gray-900 hover:text-[#FFE330] font-semibold">
     {bookName}
   </h2>
-  <img className="w-[300px] mx-auto" src={image} alt="" />
+  <img className="w-full h-full object-fill" src={image} alt="" />
+
+
+
 
   <div className="flex items-center gap-4 my-2 justify-center">
     <h3 className="text-[20px] font-semibold text-[#EDD00F]">${discountPrice}</h3>

@@ -153,8 +153,8 @@ const ChildrenBooks = () => {
         </h2>
         <p className="h-[4px] text-center bg-yellow-500 w-[40px] group-hover:w-[160px] ease-in-out duration-300"></p>
       </div>
-      <div className="mt-6 p-4">
-        <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
+      <div className="mt-6 py-4">
+        <div className="grid lg:grid-cols-5 px-4 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-center items-center">
           {data.slice(0, viewList).map((book) => (
             <BookCard key={book.id} book={book} />
           ))}
