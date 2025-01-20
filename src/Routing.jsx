@@ -1,8 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
+
 import MainLayOut from "./MainLayOut";
 import Home from "./pages/Home";
-import AddToCart from "./pages/AddToCart";
 import Details from "./pages/Details";
+import AddToCart from "./pages/AddToCart";
+import { createBrowserRouter } from "react-router";
+
 
 export const router = createBrowserRouter([
   {
@@ -18,9 +20,11 @@ export const router = createBrowserRouter([
         element: <AddToCart/>,
       },
       {
-        path: "/details/:id", // Represents the default child route
-        element:<Details/>,
-      },
+        path: "/details/:id",  // This should correspond to the dynamic route where the id will be captured
+        element: <Details />
+      }
+
     ],
   },
-]);
+])
+

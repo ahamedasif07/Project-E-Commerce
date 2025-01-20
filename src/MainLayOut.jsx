@@ -87,11 +87,11 @@ const MainLayOut = () => {
         transition={Bounce}
       />
       <DataContext.Provider value={{ data, loading, error }}>
-        <AddToCartContext.Provider value={{ handleAddToCart, cart, setCart, handleRemoveFromCart }}>
-          <NavBar />
-          <Outlet />
-        </AddToCartContext.Provider>
-      </DataContext.Provider>
+  <AddToCartContext.Provider value={{ handleAddToCart, cart, setCart, handleRemoveFromCart }}>
+  <NavBar />
+  <Outlet /> {/* Replace this with NavBar, Outlet, or any child components */}
+  </AddToCartContext.Provider>
+</DataContext.Provider>
     </div>
   );
 };

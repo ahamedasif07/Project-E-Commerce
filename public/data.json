@@ -1,138 +1,182 @@
 [
-    {
-      "id": 1,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/FW5D5QM/images-14.jpg",
-      "bookName": "Magic Adventures",
-      "price": 14.99,
-      "discountPrice": 10.99,
-      "discountPercentage": 27
-    },
-    {
-      "id": 2,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
-      "bookName": "Fairy Tales",
-      "price": 12.99,
-      "discountPrice": 9.49,
-      "discountPercentage": 27
-    },
-    {
-      "id": 3,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/0m8sb4D/images-10.jpgshttps://i.ibb.co.com/f1XbfgR/images-11.jpg",
-      "bookName": "Learn to Count",
-      "price": 8.75,
-      "discountPrice": 6.49,
-      "discountPercentage": 26
-    },
-    {
-      "id": 4,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/Hp1pDkr/images-15.jpg",
-      "bookName": "Bedtime Stories",
-      "price": 10.5,
-      "discountPrice": 7.75,
-      "discountPercentage": 26
-    },
-    {
-      "id": 5,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
-      "bookName": "Discover Nature",
-      "price": 13.99,
-      "discountPrice": 10.29,
-      "discountPercentage": 27
-    },
-    {
-      "id": 6,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
-      "bookName": "Coloring Fun",
-      "price": 9.99,
-      "discountPrice": 7.49,
-      "discountPercentage": 25
-    },
-    {
-      "id": 7,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/0m8sb4D/images-10.jpgshttps://i.ibb.co.com/f1XbfgR/images-11.jpg",
-      "bookName": "Animal Kingdom",
-      "price": 16.75,
-      "discountPrice": 12.75,
-      "discountPercentage": 24
-    },
-    {
-      "id": 8,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
-      "bookName": "Stories of Heroes",
-      "price": 11.5,
-      "discountPrice": 8.99,
-      "discountPercentage": 22
-    },
-    {
-      "id": 9,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
-      "bookName": "Ocean Adventures",
-      "price": 15.75,
-      "discountPrice": 11.99,
-      "discountPercentage": 24
-    },
-    {
-      "id": 10,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
-      "bookName": "Jungle Explorers",
-      "price": 18.99,
-      "discountPrice": 14.49,
-      "discountPercentage": 24
-    },
-    {
-      "id": 11,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/FW5D5QM/images-14.jpg",
-      "bookName": "Magic Adventures",
-      "price": 14.99,
-      "discountPrice": 10.99,
-      "discountPercentage": 27
-    },
-    {
-      "id": 12,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
-      "bookName": "Fairy Tales",
-      "price": 12.99,
-      "discountPrice": 9.49,
-      "discountPercentage": 27
-    },
-    {
-      "id": 13,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/0m8sb4D/images-10.jpgshttps://i.ibb.co.com/f1XbfgR/images-11.jpg",
-      "bookName": "Learn to Count",
-      "price": 8.75,
-      "discountPrice": 6.49,
-      "discountPercentage": 26
-    },
-    {
-      "id": 14,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/Hp1pDkr/images-15.jpg",
-      "bookName": "Bedtime Stories",
-      "price": 10.5,
-      "discountPrice": 7.75,
-      "discountPercentage": 26
-    },
-    {
-      "id": 15,
-      "bookCategory": "Children's Books",
-      "image": "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
-      "bookName": "Discover Nature",
-      "price": 13.99,
-      "discountPrice": 10.29,
-      "discountPercentage": 27
-    }
-  ]
-  
+  {
+    "id": 1,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/FW5D5QM/images-14.jpg",
+    "bookName": "Magic Adventures",
+    "price": 14.99,
+    "discountPrice": 10.99,
+    "discountPercentage": 27,
+    "author": "Jane Smith",
+    "rating": 4.5,
+    "shortDescription": "Embark on a magical journey filled with wonder and excitement."
+  },
+  {
+    "id": 2,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
+    "bookName": "Fairy Tales",
+    "price": 12.99,
+    "discountPrice": 9.49,
+    "discountPercentage": 27,
+    "author": "Emily Brown",
+    "rating": 4.3,
+    "shortDescription": "Classic fairy tales retold for modern readers."
+  },
+  {
+    "id": 3,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/0m8sb4D/images-10.jpg",
+    "bookName": "Learn to Count",
+    "price": 8.75,
+    "discountPrice": 6.49,
+    "discountPercentage": 26,
+    "author": "Mark Jones",
+    "rating": 4.8,
+    "shortDescription": "An interactive book to make counting fun and easy."
+  },
+  {
+    "id": 4,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/Hp1pDkr/images-15.jpg",
+    "bookName": "Bedtime Stories",
+    "price": 10.5,
+    "discountPrice": 7.75,
+    "discountPercentage": 26,
+    "author": "Sophia Green",
+    "rating": 4.7,
+    "shortDescription": "Soothing stories to help kids fall asleep peacefully."
+  },
+  {
+    "id": 5,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
+    "bookName": "Discover Nature",
+    "price": 13.99,
+    "discountPrice": 10.29,
+    "discountPercentage": 27,
+    "author": "Noah Williams",
+    "rating": 4.4,
+    "shortDescription": "Explore the wonders of nature with vibrant illustrations."
+  },
+  {
+    "id": 6,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
+    "bookName": "Coloring Fun",
+    "price": 9.99,
+    "discountPrice": 7.49,
+    "discountPercentage": 25,
+    "author": "Emma Taylor",
+    "rating": 4.6,
+    "shortDescription": "A delightful coloring book to spark creativity."
+  },
+  {
+    "id": 7,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/0m8sb4D/images-10.jpg",
+    "bookName": "Animal Kingdom",
+    "price": 16.75,
+    "discountPrice": 12.75,
+    "discountPercentage": 24,
+    "author": "Oliver Davis",
+    "rating": 4.9,
+    "shortDescription": "Discover amazing facts about animals with this book."
+  },
+  {
+    "id": 8,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
+    "bookName": "Stories of Heroes",
+    "price": 11.5,
+    "discountPrice": 8.99,
+    "discountPercentage": 22,
+    "author": "Amelia Wilson",
+    "rating": 4.5,
+    "shortDescription": "Inspiring stories of bravery and heroism for kids."
+  },
+  {
+    "id": 9,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
+    "bookName": "Ocean Adventures",
+    "price": 15.75,
+    "discountPrice": 11.99,
+    "discountPercentage": 24,
+    "author": "Liam Miller",
+    "rating": 4.6,
+    "shortDescription": "Dive into the ocean and explore its mysteries."
+  },
+  {
+    "id": 10,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
+    "bookName": "Jungle Explorers",
+    "price": 18.99,
+    "discountPrice": 14.49,
+    "discountPercentage": 24,
+    "author": "Isabella Martinez",
+    "rating": 4.8,
+    "shortDescription": "Uncover the secrets of the jungle with this adventurous book."
+  },
+  {
+    "id": 11,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/FW5D5QM/images-14.jpg",
+    "bookName": "Magic Adventures",
+    "price": 14.99,
+    "discountPrice": 10.99,
+    "discountPercentage": 27,
+    "author": "Charlotte Moore",
+    "rating": 4.7,
+    "shortDescription": "A magical story that captivates the imagination."
+  },
+  {
+    "id": 12,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/w6VCv0r/images-9.jpg",
+    "bookName": "Fairy Tales",
+    "price": 12.99,
+    "discountPrice": 9.49,
+    "discountPercentage": 27,
+    "author": "Benjamin Clark",
+    "rating": 4.4,
+    "shortDescription": "Timeless fairy tales retold for today's readers."
+  },
+  {
+    "id": 13,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/0m8sb4D/images-10.jpg",
+    "bookName": "Learn to Count",
+    "price": 8.75,
+    "discountPrice": 6.49,
+    "discountPercentage": 26,
+    "author": "Mia Johnson",
+    "rating": 4.9,
+    "shortDescription": "Engaging exercises to help kids learn numbers effortlessly."
+  },
+  {
+    "id": 14,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/Hp1pDkr/images-15.jpg",
+    "bookName": "Bedtime Stories",
+    "price": 10.5,
+    "discountPrice": 7.75,
+    "discountPercentage": 26,
+    "author": "Elijah Brown",
+    "rating": 4.7,
+    "shortDescription": "Calm and gentle tales perfect for bedtime."
+  },
+  {
+    "id": 15,
+    "bookCategory": "Children's Books",
+    "image": "https://i.ibb.co.com/hVdWXK7/images-11.jpg",
+    "bookName": "Discover Nature",
+    "price": 13.99,
+    "discountPrice": 10.29,
+    "discountPercentage": 27,
+    "author": "Ava Garcia",
+    "rating": 4.6,
+    "shortDescription": "A colorful journey through nature's wonders."
+  }
+]

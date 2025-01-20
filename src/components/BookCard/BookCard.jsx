@@ -3,13 +3,14 @@ import React, { useContext } from 'react'
 import { FaShoppingCart } from "react-icons/fa";
 import { FaDiceD6 } from "react-icons/fa6";
 import { IoEye } from "react-icons/io5";
-import { Link } from 'react-router';
+
 import { AddToCartContext } from '../../MainLayOut';
+import { Link } from 'react-router';
 
 
 const BookCard = ({book}) => {
-  // eslint-disable-next-line no-unused-vars
-    const {handleAddToCart}=useContext(AddToCartContext)
+
+    const {handleAddToCart}=useContext(AddToCartContext);
     const {bookCategory,id,image,bookName,price,discountPrice,discountPercentage}=book;
   return (
     <div>
@@ -18,7 +19,7 @@ const BookCard = ({book}) => {
   <h2 className="text-[16px] text-center py-2 transition-all ease-in-out duration-300 text-gray-900 hover:text-[#FFE330] font-semibold">
     {bookName}
   </h2>
-  <div className="max-w-[180px]  mx-auto">
+  <div className=" mx-auto">
   <img className="w-full h-full object-cover" src={image} alt="" />
 </div>
 
@@ -41,9 +42,9 @@ const BookCard = ({book}) => {
   
       <IoEye />
     </p>
-    <Link to={`/details/${id}`} className="p-1 text-gray-700 border-b-2  border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
-    < FaDiceD6/>
-    </Link>
+    <Link to={`/details/${id}`} className="p-1 text-gray-700 border-b-2 border-gray-600 hover:border-[#FFE330] hover:text-[#FFE330] transition-all duration-300 ease-in-out">
+            <FaDiceD6 />
+          </Link>
   </div>
 </div>
 

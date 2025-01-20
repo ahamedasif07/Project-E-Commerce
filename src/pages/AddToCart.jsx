@@ -4,7 +4,7 @@ import AddToCartCard from '../components/AddToCartCard/AddToCartCard'
 
 
 const AddToCart = () => {
- const {cart}=useContext(AddToCartContext)
+ const {cart} = useContext(AddToCartContext)
 
   return (
     <div>

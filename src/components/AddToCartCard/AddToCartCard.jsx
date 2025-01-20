@@ -4,7 +4,7 @@ import { RiDeleteBinLine } from 'react-icons/ri';
 import { AddToCartContext } from '../../MainLayOut';
 
 const AddToCartCard = ({ book, addToCart }) => {
-    const {handleRemoveFromCart}=useContext(AddToCartContext);
+    const {handleRemoveFromCart} = useContext(AddToCartContext);
     const { name, image, bookCategory, bookName, price, discountPrice, discountPercentage } = book;
 
     // State to manage quantity

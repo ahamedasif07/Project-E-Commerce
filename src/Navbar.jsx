@@ -26,7 +26,7 @@ const Navbar = () => {
       <ul className="flex items-center gap-5">
       <li>
         <NavLink
-          to="/home"
+          to="/"
           className={({ isActive }) =>
             `text-[18px] text-gray-800 font-[500] ${isActive ? 'border-b-2 border-red-500' : ''}`
           }

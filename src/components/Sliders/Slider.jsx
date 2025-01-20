@@ -21,7 +21,7 @@ const Slider = () => {
 
   return (
    <div className="max-w-screen-2xl md:px-[50px] w-full mx-auto py-[50px]">
-     <div className="relative w-full  max-h-[700px] overflow-hidden bg-gray-200">
+     <div className="relative w-full  max-h-[600px] overflow-hidden bg-gray-200">
       {/* Slides */}
       <div
         className="flex transition-transform  duration-500 ease-in-out"
