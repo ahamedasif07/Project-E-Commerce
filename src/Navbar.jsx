@@ -6,10 +6,11 @@ import { FaUser } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import logo from '../src/assets/logo.png';
 import { Link, NavLink } from 'react-router-dom';
+import { MyContext } from './MainLayOut';
 
 
 const Navbar = () => {
-  // const {cart} = useContext(MyContex)
+  const {cart} = useContext(MyContext)
   const [isMenuOpen,setIsMenuOpen]=useState(false)
   
   return (
@@ -74,7 +75,7 @@ const Navbar = () => {
       <div className='flex items-center gap-4'>
         <p className='text-[18px]'><FaSearch /></p>
         <Link to='/AddToCart' className='text-[18px] relative md:block hidden'><h2 className='flex items-center'><FaShoppingCart />
-        <p className='bg-red-500 text-[10px] absolute bottom-[12px] left-[14px] px-[4px] rounded-md text-center text-white '>0</p></h2>
+        <p className='bg-red-500 text-[10px] absolute bottom-[12px] left-[14px] px-[4px] rounded-md text-center text-white '>{cart.length}</p></h2>
         </Link>
         <p className='text-[18px] md:block hidden'><FaUser /></p>
         <p onClick={()=>setIsMenuOpen(!isMenuOpen)} className='text-[18px] md:hidden block'><RiMenu3Line /></p>
