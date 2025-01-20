@@ -1,13 +1,15 @@
-import React, { useContext,  useEffect,  useState } from 'react';
+import React, {  useContext, useEffect,  useState } from 'react';
 import { Link, useParams } from 'react-router-dom'; // Make sure to use `react-router-dom`
-import { AddToCartContext, DataContext } from '../MainLayOut';
+
 import ChildrenBooks from '../components/AllBooks/ChildrenBooks';
+import { MyContex } from '../MainLayOut';
 
 
 const Details = () => {
-  const { id } = useParams();
-  const { data } = useContext(DataContext);
-  const {handleAddToCart} = useContext(AddToCartContext)
+;
+  const { data ,handleAddToCart} = useContext(MyContex);
+  const { id } = useParams()
+
   const [productDetail, setProductDetail] = useState({}); // Set the initial state to `null`
 
   useEffect(() => {

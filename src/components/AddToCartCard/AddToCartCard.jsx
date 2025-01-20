@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React, { useContext, useState } from 'react';
 import { RiDeleteBinLine } from 'react-icons/ri';
-import { AddToCartContext } from '../../MainLayOut';
+import {  MyContex,  } from '../../MainLayOut';
 
 const AddToCartCard = ({ book, addToCart }) => {
-    const {handleRemoveFromCart} = useContext(AddToCartContext);
+    const {handleRemoveFromCart} = useContext(MyContex);
     const { name, image, bookCategory, bookName, price, discountPrice, discountPercentage } = book;
 
     // State to manage quantity

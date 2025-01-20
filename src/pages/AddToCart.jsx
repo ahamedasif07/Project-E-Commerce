@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { AddToCartContext } from '../MainLayOut'
+import {  MyContex } from '../MainLayOut'
 import AddToCartCard from '../components/AddToCartCard/AddToCartCard'
 
 
 const AddToCart = () => {
- const {cart} = useContext(AddToCartContext)
+ const {cart} = useContext(MyContex);
 
   return (
     <div>
