@@ -74,7 +74,7 @@ const Navbar = () => {
        
       <div className='flex items-center gap-4'>
         <p className='text-[18px]'><FaSearch /></p>
-        <Link to='/AddToCart' className='text-[18px] relative md:block hidden'><h2 className='flex items-center'><FaShoppingCart />
+        <Link to='/addToCart' className='text-[18px] relative md:block hidden'><h2 className='flex items-center'><FaShoppingCart />
         <p className='bg-red-500 text-[10px] absolute bottom-[12px] left-[14px] px-[4px] rounded-md text-center text-white '>{cart.length}</p></h2>
         </Link>
         <p className='text-[18px] md:block hidden'><FaUser /></p>

@@ -8,6 +8,7 @@ import { createBrowserRouter } from "react-router";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import AddToCart from "./pages/AddToCart";
+import Details from "./pages/Details";
 
 
 export const router = createBrowserRouter([
@@ -34,10 +35,10 @@ export const router = createBrowserRouter([
         path: "/addToCart", // Represents the default child route
         element: <AddToCart/>,
       },
-      // {
-      //   path: "/details/:id",  // This should correspond to the dynamic route where the id will be captured
-      //   element: <Details />
-      // }
+      {
+        path: "/details/:id",  // This should correspond to the dynamic route where the id will be captured
+        element:<Details/>
+      }
 
     ],
   },
