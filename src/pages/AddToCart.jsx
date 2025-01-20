@@ -8,6 +8,7 @@ const AddToCart = () => {
 
   return (
     <div>
+      <h2 className='py-4 text-center text-[30px] uppercase'>Add To Cart Items</h2>
         <div className='mt-4'>
          {
          cart.map(book => <AddToCartCard key={book.id} book={book}></AddToCartCard>)
